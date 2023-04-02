@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # local apps
     'apps.client',
+    'apps.product',
 
     # packages
     'rest_framework',

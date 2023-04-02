@@ -1,8 +1,8 @@
 from django.urls import path
 
-from apps.client.api.create_client import ClientCreateAPIView
-from apps.client.api.list_client import ClientListAPIView
-from apps.client.api.retrieve_client import ClientRetrieveAPIView
+from apps.client.api.client_create import ClientCreateAPIView
+from apps.client.api.client_list import ClientListAPIView
+from apps.client.api.client_retrieve import ClientRetrieveAPIView
 
 urlpatterns = [
     path('create/', ClientCreateAPIView.as_view()),
