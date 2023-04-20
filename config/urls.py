@@ -21,12 +21,12 @@ from . import settings
 from .yasg import schema_view
 
 urlpatterns = [
-    path('api/admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 
-    path('api/apps/', include('apps.urls')),
+    path('apps/', include('apps.urls')),
 
-    path('api/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
